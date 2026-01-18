@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballonspillet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="start-menu" id="startMenu">
+            <div class="menu-content">
+                <h1>Ballonspillet</h1>
+                <div class="menu-section">
+                    <h2>Vælg ord:</h2>
+                    <div class="word-selection">
+                        <label>
+                            <input type="radio" name="wordMode" value="custom" checked>
+                            Vælg selv
+                        </label>
+                        <label>
+                            <input type="radio" name="wordMode" value="random">
+                            Random 15 ord
+                        </label>
+                    </div>
+                    <div class="custom-selection" id="customSelection">
+                        <h3>Skriv ordene (adskilt med komma eller linjeskift):</h3>
+                        <textarea id="customWordsInput" rows="8" placeholder="ved, passer, overflade, stier..."></textarea>
+                    </div>
+                </div>
+                <button class="start-button" id="startButton">Start Spil</button>
+            </div>
+        </div>
+        <div class="room" id="room" style="display: none;">
+            <div class="lives-container" id="livesContainer"></div>
+            <div class="door-container">
+                <div class="door closed" id="door"></div>
+            </div>
+            <div class="board-container">
+                <div class="board" id="board">
+                    <div class="word-display" id="wordDisplay"></div>
+                </div>
+                <div class="speaker" id="speaker" title="Klik for at høre ordet igen">
+                    🔊
+                </div>
+            </div>
+            <div class="keyboard-container">
+                <div class="keyboard" id="keyboard"></div>
+            </div>
+        </div>
+        <div class="fireworks" id="fireworks"></div>
+        <div class="victory-menu" id="victoryMenu" style="display: none;">
+            <div class="victory-content">
+                <h1>🎉 Tillykke! 🎉</h1>
+                <p>Du har gennemført spillet!</p>
+                <div class="victory-buttons">
+                    <button class="victory-button" id="playAgainButton">Gentag samme spil</button>
+                    <button class="victory-button" id="backToStartButton">Tilbage til start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
